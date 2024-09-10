@@ -1,11 +1,10 @@
-import { Link, router } from 'expo-router';
-import { View, Text, Pressable } from 'react-native';
+import { View, Pressable } from 'react-native';
+import { Link } from 'expo-router';
 
 const HomePage = () => {
   return (
     <View>
-      <Text>HomePage</Text>
-      <Link
+      {/* <Link
         href={{
           pathname: '/users/[id]',
           params: {
@@ -15,17 +14,8 @@ const HomePage = () => {
         }}
       >
         go to user 1
-      </Link>
-      <Pressable
-        onPress={() =>
-          router.push({
-            pathname: '/users/[id]',
-            params: { id: '2' },
-          })
-        }
-      >
-        <Text>go to user 2</Text>
-      </Pressable>
+      </Link> */}
+      <Link href="/modal">Open modal</Link>
     </View>
   );
 };

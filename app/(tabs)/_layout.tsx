@@ -1,6 +1,11 @@
 import { Tabs } from 'expo-router';
+import { useState } from 'react';
+import { Text, Pressable } from 'react-native';
+import HeaderRight from '../../components/HeaderRight';
 
 const TabsLayout = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <Tabs>
       <Tabs.Screen
@@ -8,6 +13,8 @@ const TabsLayout = () => {
         options={{
           headerTitle: 'Home',
           title: 'Home',
+          headerLeft: () => <Text style={{ paddingLeft: 8 }}>Profile</Text>,
+          headerRight: () => <HeaderRight />,
         }}
       />
       <Tabs.Screen
