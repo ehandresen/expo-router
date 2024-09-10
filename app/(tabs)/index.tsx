@@ -9,7 +9,7 @@ const HomePage = () => {
         href={{
           pathname: '/users/[id]',
           params: {
-            id: 1,
+            id: '1',
             name: 'john',
           },
         }}
@@ -20,7 +20,7 @@ const HomePage = () => {
         onPress={() =>
           router.push({
             pathname: '/users/[id]',
-            params: { id: 2 },
+            params: { id: '2' },
           })
         }
       >
